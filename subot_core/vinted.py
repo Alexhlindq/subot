@@ -275,6 +275,17 @@ def _is_listing_record(value):
     return bool(_title(value))
 
 
+def _catalog_record(value):
+    """Return one validated listing from a catalog row, if present."""
+
+    if _is_listing_record(value):
+        return value
+    if not isinstance(value, Mapping):
+        return None
+    product_item = value.get("productItem")
+    return product_item if _is_listing_record(product_item) else None
+
+
 def _catalog_records(value):
     """Return records only from a recognized Vinted catalog-state shape."""
 
@@ -298,7 +309,7 @@ def _catalog_records(value):
     ):
         return [], False
 
-    records = [item for item in items if _is_listing_record(item)]
+    records = [record for item in items if (record := _catalog_record(item))]
     return records, not items
 
 

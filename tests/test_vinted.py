@@ -53,6 +53,31 @@ class ExtractItemsTests(unittest.TestCase):
         self.assertEqual(items[0]["id"], "9876543210")
         self.assertEqual(items[0]["title"], "MacBook")
 
+    def test_extracts_product_item_wrappers_from_current_catalog_state(self):
+        product_item = {
+            "id": 1234567890,
+            "title": "iPhone 13",
+            "price": {"amount": "250.00", "currency_code": "EUR"},
+            "url": "/items/1234567890-iphone-13",
+        }
+        rsc = {
+            "initialCatalogState": {
+                "items": {
+                    "items": [
+                        {
+                            "id": 1234567890,
+                            "productItem": product_item,
+                        }
+                    ],
+                    "pagination": {"current_page": 1},
+                }
+            }
+        }
+        rsc_text = json.dumps("7:" + json.dumps(rsc, ensure_ascii=False))
+        html = f'<script>self.__next_f.push([1,{rsc_text}])</script>'
+
+        self.assertEqual(vinted.extract_items(html), [product_item])
+
     def test_ignores_item_collections_outside_initial_catalog_state(self):
         catalog_item = {
             "id": 42,
