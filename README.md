@@ -82,3 +82,9 @@ Check its status:
 ```bash
 systemctl --user status subot.service
 ```
+
+View the service logs:
+
+```bash
+journalctl --user -u subot.service --no-pager
+```
