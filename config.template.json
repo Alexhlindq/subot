@@ -1,0 +1,13 @@
+{
+  "search_urls": [
+    "https://www.vinted.it/catalog?search_text=maglione"
+  ],
+  "poll_interval_min": 300,
+  "poll_interval_max": 600,
+  "notification_channels": [
+    "telegram"
+  ],
+  "telegram_bot_token": "",
+  "telegram_chat_id": "",
+  "use_llm": false
+}
