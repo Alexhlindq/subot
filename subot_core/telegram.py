@@ -6,7 +6,11 @@ from .ntfy import fmt_price
 
 
 def notify(cfg, item):
-    """Send one listing to the configured Telegram chat."""
+    """Send one listing to the configured Telegram chat(s).
+
+    telegram_chat_id kan vara ett enda id eller flera kommaseparerade
+    id:n om du vill att notiserna ska gå till fler personer samtidigt.
+    """
 
     location = " ".join(
         x
@@ -27,12 +31,14 @@ def notify(cfg, item):
         if x
     )
     endpoint = f"https://api.telegram.org/bot{cfg['telegram_bot_token']}/sendMessage"
-    response = requests.post(
-        endpoint,
-        json={"chat_id": cfg["telegram_chat_id"], "text": text},
-        timeout=20,
-    )
-    response.raise_for_status()
-    payload = response.json()
-    if not payload.get("ok"):
-        raise RuntimeError("Telegram rejected the notification request")
+    chat_ids = [c.strip() for c in str(cfg["telegram_chat_id"]).split(",") if c.strip()]
+    for chat_id in chat_ids:
+        response = requests.post(
+            endpoint,
+            json={"chat_id": chat_id, "text": text},
+            timeout=20,
+        )
+        response.raise_for_status()
+        payload = response.json()
+        if not payload.get("ok"):
+            raise RuntimeError("Telegram rejected the notification request")
