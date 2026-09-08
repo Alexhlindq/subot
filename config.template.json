@@ -1,6 +1,6 @@
 {
   "search_urls": [
-    "https://www.vinted.it/catalog?search_text=maglione"
+    "https://www.vinted.it/catalog?search_text=Golden%20goose&catalog[]=1231&price_from=0.00&price_to=50.00&currency=EUR&brand_ids[]=5257&brand_ids[]=38923&size_ids[]=782&size_ids[]=783&size_ids[]=784&size_ids[]=785&size_ids[]=786&size_ids[]=787&order=newest_first"
   ],
   "poll_interval_min": 300,
   "poll_interval_max": 600,
