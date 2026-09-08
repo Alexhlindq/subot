@@ -49,6 +49,6 @@ jobs:
         run: |
           git config user.name "subot"
           git config user.email "subot@users.noreply.github.com"
-          git add state.sqlite3
+          git add -f state.sqlite3
           git diff --quiet --cached || git commit -m "Uppdatera state.sqlite3"
           git push
