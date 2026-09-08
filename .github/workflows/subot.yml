@@ -1,0 +1,54 @@
+name: Subot
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: subot-run
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run-subot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hämta koden
+        uses: actions/checkout@v4
+
+      - name: Installera Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installera beroenden
+        run: pip install .
+
+      - name: Bygg config.json från mall + secrets
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python - <<'PYEOF'
+          import json, os
+          with open("config.template.json") as f:
+              cfg = json.load(f)
+          cfg["telegram_bot_token"] = os.environ["TELEGRAM_BOT_TOKEN"]
+          cfg["telegram_chat_id"] = os.environ["TELEGRAM_CHAT_ID"]
+          with open("config.json", "w") as f:
+              json.dump(cfg, f, ensure_ascii=False, indent=2)
+          PYEOF
+
+      - name: Kör subot (en körning)
+        run: python subot.py --once
+
+      - name: Spara uppdaterat state
+        run: |
+          git config user.name "subot"
+          git config user.email "subot@users.noreply.github.com"
+          git add state.sqlite3
+          git diff --quiet --cached || git commit -m "Uppdatera state.sqlite3"
+          git push
