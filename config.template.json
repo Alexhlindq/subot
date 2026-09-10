@@ -1,14 +1,15 @@
 {
   "search_urls": [
     "https://www.vinted.it/catalog?search_text=Golden%20goose&catalog[]=1231&price_from=0.00&price_to=50.00&currency=EUR&brand_ids[]=5257&brand_ids[]=38923&size_ids[]=782&size_ids[]=783&size_ids[]=784&size_ids[]=785&size_ids[]=786&size_ids[]=787&order=newest_first",
-    "https://www.vinted.it/catalog?search_text=Nudie%20Jeans&catalog[]=2052&catalog[]=79&catalog[]=77&catalog[]=257&price_to=50.00&currency=EUR&order=newest_first",
-    "https://www.vinted.it/catalog?search_text=Moncler&catalog[]=2052&catalog[]=79&catalog[]=77&price_to=50.00&currency=EUR&order=newest_first",
-    "https://www.vinted.it/catalog?search_text=Polo%20Ralph%20Lauren&catalog[]=2052&catalog[]=79&catalog[]=77&price_to=50.00&currency=EUR&order=newest_first",
-    "https://www.vinted.it/catalog?search_text=Woolrich&catalog[]=2052&catalog[]=79&catalog[]=77&price_to=50.00&currency=EUR&order=newest_first",
-    "https://www.vinted.it/catalog?search_text=Comme%20des%20Gar%C3%A7ons&catalog[]=2052&catalog[]=79&catalog[]=77&price_to=50.00&currency=EUR&order=newest_first",
-    "https://www.vinted.it/catalog?search_text=Canada%20Goose&catalog[]=2052&catalog[]=79&catalog[]=77&price_to=50.00&currency=EUR&order=newest_first",
-    "https://www.vinted.it/catalog?search_text=Herno&catalog[]=2052&catalog[]=79&catalog[]=77&price_to=50.00&currency=EUR&order=newest_first",
-    "https://www.vinted.it/catalog?search_text=Acne%20Studios&catalog[]=2052&catalog[]=79&catalog[]=77&price_to=50.00&currency=EUR&order=newest_first"
+    "https://www.vinted.it/catalog?search_text=Moncler&catalog[]=2052&catalog[]=79&catalog[]=77&size_ids[]=207&size_ids[]=208&price_to=50.00&currency=EUR&order=newest_first",
+    "https://www.vinted.it/catalog?search_text=Polo%20Ralph%20Lauren&catalog[]=2052&catalog[]=79&catalog[]=77&size_ids[]=207&size_ids[]=208&price_to=50.00&currency=EUR&order=newest_first",
+    "https://www.vinted.it/catalog?search_text=Woolrich&catalog[]=2052&catalog[]=79&catalog[]=77&size_ids[]=207&size_ids[]=208&price_to=50.00&currency=EUR&order=newest_first",
+    "https://www.vinted.it/catalog?search_text=Comme%20des%20Gar%C3%A7ons&catalog[]=2052&catalog[]=79&catalog[]=77&size_ids[]=207&size_ids[]=208&price_to=50.00&currency=EUR&order=newest_first",
+    "https://www.vinted.it/catalog?search_text=Canada%20Goose&catalog[]=2052&catalog[]=79&catalog[]=77&size_ids[]=207&size_ids[]=208&price_to=50.00&currency=EUR&order=newest_first",
+    "https://www.vinted.it/catalog?search_text=Herno&catalog[]=2052&catalog[]=79&catalog[]=77&size_ids[]=207&size_ids[]=208&price_to=50.00&currency=EUR&order=newest_first",
+    "https://www.vinted.it/catalog?search_text=Acne%20Studios&catalog[]=2052&catalog[]=79&catalog[]=77&size_ids[]=207&size_ids[]=208&price_to=50.00&currency=EUR&order=newest_first",
+    "https://www.vinted.it/catalog?search_text=Nudie%20Jeans&catalog[]=2052&catalog[]=79&catalog[]=77&size_ids[]=207&size_ids[]=208&price_to=50.00&currency=EUR&order=newest_first",
+    "https://www.vinted.it/catalog?search_text=Nudie%20Jeans&catalog[]=257&price_to=50.00&currency=EUR&order=newest_first"
   ],
   "poll_interval_min": 300,
   "poll_interval_max": 600,
