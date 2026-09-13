@@ -9,7 +9,8 @@
     "https://www.vinted.it/catalog?search_text=Acne%20Studios&catalog[]=2052&catalog[]=79&catalog[]=77&size_ids[]=207&size_ids[]=208&price_to=50.00&currency=EUR&order=newest_first",
     "https://www.vinted.it/catalog?search_text=Polo%20Ralph%20Lauren&catalog[]=79&size_ids[]=207&size_ids[]=208&price_to=10.00&currency=EUR&order=newest_first",
     "https://www.vinted.it/catalog?search_text=Nudie%20Jeans&catalog[]=2052&catalog[]=79&size_ids[]=207&size_ids[]=208&price_to=10.00&currency=EUR&order=newest_first",
-    "https://www.vinted.it/catalog?search_text=Nudie%20Jeans&catalog[]=257&size_ids[]=1638&size_ids[]=1639&size_ids[]=1640&price_to=10.00&currency=EUR&order=newest_first"
+    "https://www.vinted.it/catalog?search_text=Nudie%20Jeans&catalog[]=257&size_ids[]=1638&size_ids[]=1639&size_ids[]=1640&price_to=10.00&currency=EUR&order=newest_first",
+    "https://www.vinted.it/catalog?catalog[]=1231&brand_ids[]=5928803&brand_ids[]=15450529&brand_ids[]=15438652&brand_ids[]=56974&brand_ids[]=929240&brand_ids[]=5983778&brand_ids[]=6148561&brand_ids[]=7328353&price_to=30&currency=EUR&size_ids[]=782&size_ids[]=783&size_ids[]=784&size_ids[]=785&size_ids[]=786&size_ids[]=787"
   ],
   "poll_interval_min": 300,
   "poll_interval_max": 600,
